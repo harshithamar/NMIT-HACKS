@@ -9,3 +9,4 @@ Project Idea : Our idea is to build an innovative solution in the medical sector
 Domain of the Idea Submitted : Open Innovation The theme of this Hackathon is Open-Innovation, which gives you the liberty to find innovative solutions to your problem statements. Whether you’re a rookie coder or a seasoned veteran, all you need is a laptop, an idea, and a passion for code, to be a part of this event!
 
 Click the link below for more details on this project :
+https://drive.google.com/drive/folders/1201PXni1F0lz_ZvBHIuGvaV0Ws8Iyhss?usp=sharing
