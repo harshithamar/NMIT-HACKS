@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9fa;
+}
+
+#sidebar-toggle{
+    display: none;
+}
+
+.navigation{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background: #1b3a4b;
+    border: 2px solid #577590;
+    transition: width 300ms;
+    overflow-y: auto;
+}
+
+
+.logo{
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 1rem;
+}
+
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+
+.icon{
+    position: relative; 
+    display: block;
+    min-width: 45px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+}
+
+.navigation ul li a .icon .fa{
+    color: white;
+    font-size: 24px;
+}
+
+.title{
+    font-size: medium;
+    position: relative;
+    padding: 0 10px;
+    height: 55px;
+    line-height: 50px;
+    white-space: nowrap;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: content;
+}
+
+.navigation ul li:hover{
+    background: #00ACB1;
+}
+
+.navigation ul li:nth-child(1):hover{
+    background: transparent;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+#sidebar-toggle:checked + .navigation{
+    width: 60px;
+}
+
+#sidebar-toggle:checked + .navigation ul li a span{
+    padding-left: 0.7rem;
+    text-align: center;
+}
+
+#sidebar-toggle:checked + .navigation ul li .logo span:first-child,
+#sidebar-toggle:checked + .navigation ul li a span:last-child{
+    display: none;
+}
+
+#sidebar-toggle:checked ~ .main{
+    margin-left: 60px;
+}
+
+#sidebar-toggle:checked ~ .main .header .topbar{
+    width: 100%;
+    left: 60px;
+}
+
+.main{
+    background: #f8f9fa;
+    margin-left: 250px;
+    transition: margin-left 300ms;
+}
+
+.main .topbar{
+    width: 100%;
+    background: white;
+    top: 0;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #f8f9fa;
+    z-index: 100;
+    transition: left 300ms;
+}
+
+.toggle{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    vertical-align: 1.3rem;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.toggle :hover{
+    color: #00ACB1;
+}
+
+.search-box {
+    display: inline-flex;
+    align-items: center;
+    right: 5px;
+    width: 300px;
+    height: 35px;
+    border: 2px solid #edf2f4;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    margin-left: 350px;
+    margin-right: 300px;
+    
+}
+
+.quiz-btn button{
+    width: 80px;
+    height: 30px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    border-radius: 2px solid #589ff2;
+    background-color: #589FF2;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.search-box input{
+    width: 100%;
+}
+
+.search-txt{
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: none;
+    outline: none;
+    height: 25px;
+    font-size: 13px;
+    padding-left: 11px;
+}
+
+.search-btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    color: black;
+    border-radius: 5px;
+}
+
+.search-btn:hover{
+    background-color: #61a5c2;
+}
+
+.main .header .user img{
+    display: inline-flex;
+    width: 30px;
+    cursor: pointer;
+}
+
+.main .header .user #photo{
+    display: flex;
+    justify-content: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: 2px solid #61a5c2;
+    border-radius: 50%;
+    overflow-x: hidden;
+    /* margin-left: 35rem;
+    margin-right: 20px; */
+}
+
+.btn{
+    width: calc(100% - 30px);
+    padding-left:  30px;
+    right: 15px;
+}
+
+.cur-med-btn{
+    width: 50%;
+    height: 35px;
+    font-weight: 500;
+    background: white;
+    border: 0.5px solid rgb(187, 186, 186);
+    border-radius: 15px;
+    margin: 0 auto;
+}
+.btnicon{
+    color: black;
+}
+
+.btntext{
+    color: black;
+}
+
+.cur-med-btn:hover{
+    background: #61a5c2;
+}
+
+.app-hist-btn{
+    float: right;
+    margin-top: -200pxpx;
+    width: 50%;
+    height: 35px;
+    font-weight: 500;
+    background: white;
+    border: 0.5px solid rgb(187, 186, 186);
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.app-hist-btn:hover{
+    background: #61a5c2;
+}
+
+.header .topbar .menu
+{
+    position: absolute;
+    top: 65px;
+    right: -25px;
+    padding: 10px 20px;
+    margin-right: 30px;
+    background: white;
+    width: 210px;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    border: 2px solid #61a5c2;
+    border-radius: 10px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header .topbar .active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.header .topbar .menu::before{
+    content: '';
+    position: absolute;
+    top: -7px;
+    right: 18px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    transform: rotate(45deg);
+    border-top: 2px solid #61a5c2;
+    border-left: 2px solid #61a5c2;
+}
+
+.header .topbar .menu p{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px 0;
+    font-weight: 400;
+    color: black;
+    line-height: 1.2em;
+}
+
+span.username{
+    font-weight: 600;
+    color:#555;
+}
+
+.header .topbar .menu ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+.header .topbar .menu ul li{
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    direction: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .topbar .menu ul li a:hover{
+    color: #2a9d8f;
+}
+
+.main .content{
+    width: 100%;
+    height: 100%;
+    padding: 1rem 3rem 2rem 3rem;
+}
+
+.dash-title{
+    color: grey;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.dashboard-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5rem;
+}
+
+.card-single{
+    background: white;
+    margin-bottom: 1rem;
+    border-radius: 7px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+
+.card-body{
+    padding: 1.3rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.card-body span{
+    font-size: 1.7rem;
+    color: #777;
+    padding-right: 1rem;
+}
+
+.card-body h5{
+    color: #8390a2;
+    font-size: 1rem;
+}
+
+.card-body h4{
+    font-size: 1.1rem;
+    margin-top: 0.3rem;
+}
+
+.card-footer{
+    padding: .2rem;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+.card-footer a{
+    color: #1b3a4b;
+}
+
+.dash-content{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 10px 0 30px;
+    width: 75%;
+    height: 280px;
+}
+
+.dash-content .curmed-list{
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    width: 350px;
+    height: 245px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background: white;
+}
+
+.dash-content .curmed-list h5{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.dash-content .curmed-list .list ul li{
+    width: 100%;
+    list-style: none;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding: 12px;
+    font-size: 16px;
+}
+
+.list .menu-btn{
+    float: right;
+    padding-right: 10px;
+    font-size: 20px;
+    border: none;
+    background: white;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.list .menu-btn:hover{
+    color: #2a9d8f;
+}
+
+.med-footer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(97, 97, 97);
+    font-weight: 500;
+}
+
+.med-footer a :hover{
+    color: #1b3a4b;
+}
+
+.dash-content .next-appointment{
+    display: flex-box;
+    width: 230px;
+    height: 280px;
+    background: white;
+    border-radius: 10px;
+    margin-right: 5rem;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+.dash-content .next-appointment .app-header{
+    display: inline-flex;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.dash-content .next-appointment .app-body{
+    align-content: center;
+    width: 200px;
+    height: 190px;
+    margin: 0.3rem 0 0.3rem 0.9rem;
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+.dash-content .next-appointment .app-body p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.dash-content .next-appointment .app-body ul li{
+    list-style: none;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding: 7px 0;
+}
+
+.time i{
+    padding: 0 10px;
+}
+
+.location i{
+    padding: 0 10px;
+}
+
+.dash-content .next-appointment .app-footer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.2rem;
+    color: #1b3a4b;
+}
+
+.doctor span.img-1{
+    padding-left: 1.5rem;
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    border: 1px solid black ;
+    background: white;
+}
+
+@media only screen and (max-width: 1200px){
+    .navigation{
+        width: 60px;
+    }
+
+    .navigation ul li a span{
+        padding-left: 0.7rem;
+        text-align: center;
+    }
+    
+    .navigation ul li .logo span:first-child,
+    .navigation ul li a span:last-child{
+        display: none;
+    }
+    
+    .main{
+        margin-left: 60px;
+    }
+    
+    .main .header .topbar{
+        width: 100%;
+        left: 60px;
+    }
+
+}
+
+@media only screen and (max-width: 960px){
+    .dashboard-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    .main .header .topbar{
+        width: 100%;
+    }
+
+    .search-box{
+        width: 150px;
+    }
+    .dashboard-cards{
+        grid-template-columns: 100%;
+    }
+    .cur-med-btn{
+        display: block;
+        width: 100%;
+        height: 35px;
+        font-size: 15px;
+        font-weight: 500;
+        background: white;
+        border: 0.5px solid rgb(187, 186, 186);
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .app-hist-btn{
+        display: block;
+        float: right;
+        width: 100%;
+        height: 35px;
+        font-weight: 500;
+        background: white;
+        border: 0.5px solid rgb(187, 186, 186);
+        border-radius: 15px;
+        margin: 0 auto;
+    }
+    .dash-content{
+        display: block;
+        margin-top: 5rem;
+        margin-left: auto;
+        width: 100%;
+        height: 280px;
+    }
+    .dash-content .curmed-list{
+        display: block;
+        width: 250px;
+        height: 240px;
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        background: white;   
+    }
+    .dash-content .curmed-list h5{
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 0.5rem 0 0.5rem 0;
+    }
+    
+    .dash-content .curmed-list .list ul li{
+        display: block;
+        list-style: none;
+        border-top: 1px solid rgba(0,0,0,0.05);
+        padding: 12px;
+        font-size: 15px;
+    }
+    .list .menu-btn{
+        float: right;
+        padding-right: 2px;
+        font-size: 18px;
+        border: none;
+        background: white;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .dash-content .next-appointment{
+        display: block;
+        width: 230px;
+        height: 280px;
+        background: white;
+        border-radius: 10px;
+        margin: 2rem;
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+    }
+    .toggle{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5px;
+        vertical-align: 1.3rem;
+        color: black;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    #sidebar-toggle:checked + .navigation ul li .logo span:first-child,
+    #sidebar-toggle:checked + .navigation ul li a span:last-child{
+        display: inline-flex;
+        z-index: 500;
+    }
+    #sidebar-toggle:checked + .navigation{
+        width: 240px;
+    }
+    #sidebar-toggle:checked ~ .main .header .topbar .search-box
+    {
+        display: none;
+    }
+    #sidebar-toggle:checked ~ .main .header .topbar .toggle{
+        padding-left: 11.5rem;
+    }
+}
+

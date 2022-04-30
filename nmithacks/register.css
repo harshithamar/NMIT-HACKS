@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.register-page{
+    display: flex;
+    
+}
+
+.register-img img{
+    width: 600px;
+    height: 100vh;
+}
+
+form{
+    margin-left: 125px;
+}
+
+.container{
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0,3);
+    width: 100%;
+}
+
+.container h1{
+    text-align: center;
+    margin: 20px 0 30px;
+    font-size: 30px;
+    color: #ED815A;
+}
+
+div input:hover {
+    background-color:white;
+}
+
+div div label {
+    color: black;
+}
+
+
+.input{
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.input label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+span.star{
+    color: red;
+}
+
+.input input{
+    width: 500px;
+    height: 50px;
+    padding: 0 15px;
+    background-color: transparent;
+    border: 2px solid #f0f0f0;
+    border-radius: 15px;
+}
+
+.input small {
+    display: block;
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 11px;
+    padding-top: 3px;
+    visibility: hidden;
+}
+
+/* .input.success input{
+    border: 2px solid #2ecc71;
+}
+
+.input.error input{
+    border: 2px solid #e74c3c;
+} */
+
+.input.error small{
+    visibility: visible;
+}
+
+.register-btn{
+    width: 530px;
+    height: 50px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #ED815A;
+    border: 1px solid #ED815A;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+} 
+
+.p-login{
+    margin-top: 10px;
+}
+
+p b{
+    color: #ED815A;
+}
+
